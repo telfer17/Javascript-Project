@@ -1,5 +1,6 @@
 const Request = require('../helpers/request.js');
 const PubSub = require('../helpers/pub_sub.js');
+const PlanetView = require('./planet_view.js');
 
 const PlanetGridView = function(container){
   this.container = container;
