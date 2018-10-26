@@ -1,11 +1,11 @@
-use solarSystem;
+use solarsystem;
 db.dropDatabase();
 
-db.planets.insertMany([
+db.planet_questions.insertMany([
 {
-"question": "Which planet is closest to the Sun?",
-"correct_answer": "Mercury",
-"incorrect_answers": [
+question: "Which planet is closest to the Sun?",
+correct_answer: "Mercury",
+incorrect_answers: [
 "Venus",
 "Mars",
 "Saturn"
@@ -13,9 +13,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet is farthest from the Sun?",
-"correct_answer": "Neptune",
-"incorrect_answers": [
+question: "Which planet is farthest from the Sun?",
+correct_answer: "Neptune",
+incorrect_answers: [
 "Mars",
 "Uranus",
 "Saturn"
@@ -23,9 +23,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet has the smallest surface area?",
-"correct_answer": "Mercury",
-"incorrect_answers": [
+question: "Which planet has the smallest surface area?",
+correct_answer: "Mercury",
+incorrect_answers: [
 "Mars",
 "Neptune",
 "Earth"
@@ -33,9 +33,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet has the largest surface area?",
-"correct_answer": "Jupiter",
-"incorrect_answers": [
+question: "Which planet has the largest surface area?",
+correct_answer: "Jupiter",
+incorrect_answers: [
 "Saturn",
 "Mars",
 "Earth"
@@ -43,9 +43,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet takes almost twice as long as Earth to orbit the Sun?",
-"correct_answer": "Mars",
-"incorrect_answers": [
+question: "Which planet takes almost twice as long as Earth to orbit the Sun?",
+correct_answer: "Mars",
+incorrect_answers: [
 "Venus",
 "Saturn",
 "Jupiter"
@@ -53,9 +53,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet has longest orbital period around the Sun?",
-"correct_answer": "Neptune",
-"incorrect_answers": [
+question: "Which planet has longest orbital period around the Sun?",
+correct_answer: "Neptune",
+incorrect_answers: [
 "Uranus",
 "Jupiter",
 "Saturn"
@@ -63,9 +63,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Which planet can sustain life?",
-"correct_answer": "Earth",
-"incorrect_answers": [
+question: "Which planet can sustain life?",
+correct_answer: "Earth",
+incorrect_answers: [
 "Mars",
 "Neptune",
 "Jupiter"
@@ -73,9 +73,9 @@ db.planets.insertMany([
 },
 
 {
-"question": "Bonus! Which planet was subject to a movie starring Matt Damon?",
-"correct_answer": "Mars",
-"incorrect_answers": [
+question: "Bonus! Which planet was subject to a movie starring Matt Damon?",
+correct_answer: "Mars",
+incorrect_answers: [
 "Saturn",
 "Venus",
 "Mercury"
