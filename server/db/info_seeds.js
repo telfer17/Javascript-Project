@@ -1,4 +1,8 @@
-const planets = [
+use solarsystem
+
+db.dropdatabase();
+
+db.planet_info.insertMany( [
   {
     name: "Mercury",
     Solar System position from Sun: 1,
@@ -70,4 +74,4 @@ const planets = [
     Volume: "6.254×1013 km3",
     Mass: "1.02413×1026 kg"
   }
-]
+])
