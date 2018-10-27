@@ -8,7 +8,6 @@ const PlanetGridView = function(container){
 
 PlanetGridView.prototype.bindEvents = function () {
   PubSub.subscribe('Planet:data-loaded', (event) => {
-    console.log(event.detail);
     this.render(event.detail);
   })
 

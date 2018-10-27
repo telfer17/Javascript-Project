@@ -9,7 +9,8 @@ PlanetView.prototype.render = function (planetItem) {
   const planetItemElement = document.createElement('div');
   planetItemElement.id = 'planetItem';
 
-  this.createImg(planetItem);
+  const image = this.createImg(planetItem.image);
+  planetItemElement.appendChild(image);
 
   const title = this.createTitle(planetItem.name);
   planetItemElement.appendChild(title);
@@ -18,19 +19,18 @@ PlanetView.prototype.render = function (planetItem) {
 };
 
 
-
 PlanetView.prototype.createImg = function (planet) {
-const img = document.createElement('img')
-img.src = planet.image
-img.alt = planet.name
-img.classList.add("planet-image");
-this.container.appendChild(img)
+  const image = document.createElement('img')
+  image.src = planet;
+  image.classList.add('planet-image');
+  return image;
 };
 
 
 PlanetView.prototype.createTitle = function (text) {
   const title = document.createElement('h2');
   title.textContent = text;
+  title.classList.add('planet-header')
   return title;
 };
 
