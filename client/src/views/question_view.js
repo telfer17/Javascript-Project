@@ -13,8 +13,6 @@ QuestionView.prototype.renderQuestions = function (questionObject) {
   const questionTitle = this.createQuestion(questionObject.question);
   questionElement.appendChild(questionTitle);
 
-  console.log(questionObject.answers);
-
   const answerList = this.showAnswers(questionObject.answers);
   questionElement.appendChild(answerList);
 
@@ -42,7 +40,7 @@ QuestionView.prototype.showAnswers = function (answersArray) {
     const choiceSelection = document.createElement('input');
 
     choiceSelection.setAttribute('type', 'radio');
-    choiceSelection.setAttribute('name', 'option');
+    choiceSelection.setAttribute('name', `${answersArray}`);
 
     //append the element to the ul
     ul.appendChild(listItem);
@@ -50,6 +48,7 @@ QuestionView.prototype.showAnswers = function (answersArray) {
     //outside the loop, return the ul
   })
   return ul;
+
 
 };
 

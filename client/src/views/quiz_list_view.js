@@ -9,7 +9,6 @@ QuizListView.prototype.bindEvents = function () {
   // add and eventlistener to the button click to displey the quiz on the new page
   // document.getElementById('quiz-button').addEventListener('click', (event)=>
     PubSub.subscribe('Quiz:data-loaded', (event)=> {
-      console.log(event.detail);
       this.render(event.detail)
     })
 };
@@ -21,7 +20,7 @@ QuizListView.prototype.render = function (questions) {
     questionView.renderQuestions(question);
   })
 
-  
+
 };
 
 module.exports = QuizListView;

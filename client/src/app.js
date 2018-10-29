@@ -19,5 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizListView = new QuizListView(quizContainer);
   quizListView.bindEvents();
 
+  const quizResult = document.querySelector('#quiz-result');
+  quizResult.bindevents();
+
 
 });
