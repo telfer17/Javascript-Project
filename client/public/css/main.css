@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'space-age';
+    font-family: 'conthrax';
+    src: url('../fonts/space-age.ttf');
+    src: url('../fonts/conthrax.ttf');
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'conthrax';
+}
+
+a, a:link, a:visited {
+  color: #6a6f77;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #ccc;
+}
+
+nav {
+  font-family: 'conthrax';
+  font-size: 1.8em;
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+  color: #6a6f77;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.planet-image {
+  height: 300px;
+  width: auto;
+}
+
+/* .planet-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.planet-container div {
+  flex-basis: 30%;
+} */
+
+#planets {
+  display: flex;
+  justify-content: space-between;
+  flex-basis:30%;
+}
+
+#planets div {
+  padding: 10px;
+  /* flex-basis: 30%; */
+}
+
+.planet-header {
+  font-family: 'space-age';
+  font-size: 2.8em;
+}
