@@ -1,11 +1,17 @@
 @font-face {
     font-family: 'space-age';
+    font-family: 'conthrax';
     src: url('../fonts/space-age.ttf');
+    src: url('../fonts/conthrax.ttf');
 }
 
 body {
   background: black;
   color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'conthrax';
 }
 
 a, a:link, a:visited {
@@ -18,6 +24,7 @@ a:hover, a:active, a:focus {
 }
 
 nav {
+  font-family: 'conthrax';
   font-size: 1.8em;
   padding: 0px;
   margin: 0px;

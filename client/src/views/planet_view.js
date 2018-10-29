@@ -7,7 +7,7 @@ const PlanetView = function(container){
 PlanetView.prototype.render = function (planetItem) {
 
   const planetItemElement = document.createElement('div');
-  planetItemElement.id = 'planetItem';
+  planetItemElement.id = 'planet-item';
 
   const image = this.createImg(planetItem.image);
   planetItemElement.appendChild(image);
