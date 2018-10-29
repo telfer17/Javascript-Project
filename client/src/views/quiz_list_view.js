@@ -18,9 +18,10 @@ QuizListView.prototype.render = function (questions) {
   // this.container.innerHTML = '';
   const questionView = new QuestionView(this.container);
   questions.forEach((question)=>{
-    questionView.render(question);
+    questionView.renderQuestions(question);
   })
 
+  
 };
 
 module.exports = QuizListView;

@@ -14,7 +14,7 @@ PlanetGridView.prototype.bindEvents = function () {
 };
 
 PlanetGridView.prototype.render = function (planetItems) {
-  this.container.innerHTML = '';
+  // this.container.innerHTML = '';
   const planetView = new PlanetView(this.container);
   planetItems.forEach((planetItem) => planetView.render(planetItem))
 
