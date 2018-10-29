@@ -13,7 +13,9 @@ QuestionView.prototype.renderQuestions = function (questionObject) {
   const questionTitle = this.createQuestion(questionObject.question);
   questionElement.appendChild(questionTitle);
 
-  const answerList = this.showAnswers(questionObject.answers);
+  console.log(questionObject.answers);
+
+  const answerList = this.showAnswers(questionObject.answers, questionObject.question);
   questionElement.appendChild(answerList);
 
   this.container.appendChild(questionElement);
@@ -29,7 +31,7 @@ QuestionView.prototype.createQuestion = function (text) {
 
 };
 
-QuestionView.prototype.showAnswers = function (answersArray) {
+QuestionView.prototype.showAnswers = function (answersArray, question) {
   let ul = document.createElement('ul');
   answersArray.forEach((answer)=>{
     // create an html element
@@ -38,9 +40,9 @@ QuestionView.prototype.showAnswers = function (answersArray) {
     listItem.textContent = answer;
     // add a radio button
     const choiceSelection = document.createElement('input');
-
+    choiceSelection.setAttribute('value', answer)
     choiceSelection.setAttribute('type', 'radio');
-    choiceSelection.setAttribute('name', `${answersArray}`);
+    choiceSelection.setAttribute('name', `${question}`);
 
     //append the element to the ul
     ul.appendChild(listItem);
@@ -48,7 +50,6 @@ QuestionView.prototype.showAnswers = function (answersArray) {
     //outside the loop, return the ul
   })
   return ul;
-
 
 };
 

@@ -2,6 +2,7 @@ const Planet = require('./models/planet.js');
 const PlanetGridView = require('./views/planet_grid_view.js');
 const Quiz = require('./models/quiz.js');
 const QuizListView = require('./views/quiz_list_view.js');
+const QuizResult = require('./views/result.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -19,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizListView = new QuizListView(quizContainer);
   quizListView.bindEvents();
 
-  const quizResult = document.querySelector('#quiz-result');
-  quizResult.bindevents();
+  const resultContainer = document.querySelector('#quiz-result');
+  const quizResult = new QuizResult(resultContainer);
+  quizResult.bindEvents();
 
 
 });

@@ -3,6 +3,7 @@ use solarsystem;
 
 db.planet_questions.insertMany([
   {
+    id: 1,
     question: "Which planet is closest to the Sun?",
     correct_answer: "Mercury",
     answers: [
@@ -14,6 +15,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 2,
     question: "Which planet is farthest from the Sun?",
     correct_answer: "Neptune",
     answers: [
@@ -25,6 +27,7 @@ db.planet_questions.insertMany([
   },
 
   {
+      id: 3,
     question: "Which planet has the smallest surface area?",
     correct_answer: "Mercury",
     answers: [
@@ -36,6 +39,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 4,
     question: "Which planet has the largest surface area?",
     correct_answer: "Jupiter",
     answers: [
@@ -47,6 +51,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 5,
     question: "Which planet takes almost twice as long as Earth to orbit the Sun?",
     correct_answer: "Mars",
     answers: [
@@ -58,6 +63,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 6,
     question: "Which planet has longest orbital period around the Sun?",
     correct_answer: "Neptune",
     answers: [
@@ -69,6 +75,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 7,
     question: "Which planet can sustain life?",
     correct_answer: "Earth",
     answers: [
@@ -80,6 +87,7 @@ db.planet_questions.insertMany([
   },
 
   {
+    id: 8,
     question: "Bonus! Which planet was subject to a movie starring Matt Damon?",
     correct_answer: "Mars",
     answers: [
