@@ -42,8 +42,7 @@ QuestionView.prototype.showAnswers = function (answersArray) {
     const choiceSelection = document.createElement('input');
 
     choiceSelection.setAttribute('type', 'radio');
-    choiceSelection.setAttribute('name', 'option');
-
+    choiceSelection.setAttribute('name', `${answersArray}`);
     //append the element to the ul
     ul.appendChild(listItem);
     ul.appendChild(choiceSelection)
