@@ -54,7 +54,7 @@ ul {
 }
 
 .planet-image {
-  height: 300px;
+  height: 250px;
   width: auto;
 }
 
@@ -65,7 +65,7 @@ ul {
 #planets {
   display: flex;
   flex-basis: 20%;
-  display: inline-flex;
+  /* display: inline-flex; */
   flex-wrap: wrap;
   justify-content: space-around;
 }
