@@ -21,6 +21,7 @@ QuizListView.prototype.render = function (questions) {
     questionView.renderQuestions(question);
   })
 
+  
 };
 
 module.exports = QuizListView;
