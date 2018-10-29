@@ -43,6 +43,7 @@ QuestionView.prototype.showAnswers = function (answersArray) {
 
     choiceSelection.setAttribute('type', 'radio');
     choiceSelection.setAttribute('name', `${answersArray}`);
+
     //append the element to the ul
     ul.appendChild(listItem);
     ul.appendChild(choiceSelection)
