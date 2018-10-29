@@ -10,7 +10,6 @@ Planet.prototype.getData = function () {
   const request = new Request(this.url);
   request.get()
   .then((data) => {
-    console.log(data);
     PubSub.publish('Planet:data-loaded', data);
   })
   .catch(console.error);
