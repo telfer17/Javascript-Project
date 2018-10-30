@@ -11,6 +11,11 @@ PlanetGridView.prototype.bindEvents = function () {
     this.render(event.detail);
   })
 
+  PubSub.subscribe('Planet:planetReady', (event)=>{
+    console.log(event.detail);
+    this.renderDetailed(event.detail);
+  })
+
 };
 
 PlanetGridView.prototype.render = function (planetItems) {
@@ -19,6 +24,15 @@ PlanetGridView.prototype.render = function (planetItems) {
   planetItems.forEach((planetItem) => planetView.render(planetItem))
 
 };
+
+PlanetGridView.prototype.renderDetailed = function (planetItem) {
+  this.container.innerHTML = '';
+  const planetView = new PlanetView(this.container);
+  planetView.renderDetailed(planetItem)
+
+
+};
+
 
 
 module.exports = PlanetGridView;

@@ -17,12 +17,13 @@ QuizListView.prototype.bindEvents = function () {
   // document.getElementById('quiz-button').addEventListener('click', (event)=>
     PubSub.subscribe('Quiz:data-loaded', (event)=> {
       console.log(event.detail);
+
       this.render(event.detail)
     })
 };
 
 QuizListView.prototype.render = function (questions) {
-  // this.container.innerHTML = '';
+  this.container.innerHTML = '';
   const questionView = new QuestionView(this.container);
   questions.forEach((question)=>{
     questionView.renderQuestions(question);

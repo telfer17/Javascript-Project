@@ -1,5 +1,5 @@
 use solarsystem;
-// db.dropDatabase();
+db.planet_questions.drop();
 
 db.planet_questions.insertMany([
   {
