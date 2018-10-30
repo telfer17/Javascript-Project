@@ -10,16 +10,12 @@ Quiz.prototype.bindEvents = function () {
 
   PubSub.subscribe('QuizListView:answers-submitted', (event)=>{
     const answersArray = event.detail;
-    console.log(this.questions);
     const correctAnswers = this.findCorrectAnswers(this.questions);
     console.log(correctAnswers);
-    // this.calculateScore(answersArray, correctAnswers)
-//     // const form = document.querySelectorAll("form")
-//     // const form2 = form.elements("5bd49b2de511ee046c4338bc")
-//     // console.log(form2);
-//     // this.findScore(answersObject);
+    this.calculateScore(answersArray, correctAnswers);
+
   });
-//
+
 };
 
 Quiz.prototype.getData = function () {
@@ -34,9 +30,20 @@ Quiz.prototype.getData = function () {
 };
 
 Quiz.prototype.findCorrectAnswers = function (questions) {
-  const newThing = this.questions.map((question)=> question.correct_answer)
-  console.log(newThing);
-  return newThing
+  const correctAnswers = this.questions.map((question) => question.correct_answer)
+  console.log(correctAnswers);
+  return correctAnswers
+};
+
+Quiz.prototype.calculateScore = function (correct, submitted) {
+  counter = 0
+  for (i=0; i < correct.length; i++){
+    if (correct[i] === submitted[i]){
+      counter += 1
+    }
+  }
+  console.log(counter);
+  return counter
 };
 
 
