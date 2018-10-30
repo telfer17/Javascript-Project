@@ -15,6 +15,21 @@ PlanetView.prototype.render = function (planetItem) {
   const title = this.createTitle(planetItem.name);
   planetItemElement.appendChild(title);
 
+  const position = this.createDetail('Position from Sun', planetItem.position);
+  planetItemElement.appendChild(position);
+
+  const orbit = this.createDetail('Orbit', planetItem.orbit);
+  planetItemElement.appendChild(orbit);
+
+  const surface = this.createDetail('Surface Area', planetItem.surfaceArea);
+  planetItemElement.appendChild(surface);
+
+  const volume = this.createDetail('Volume', planetItem.volume);
+  planetItemElement.appendChild(volume);
+
+  const mass = this.createDetail('Mass', planetItem.mass);
+  planetItemElement.appendChild(mass);
+
   this.container.appendChild(planetItemElement);
 };
 
@@ -32,6 +47,12 @@ PlanetView.prototype.createTitle = function (text) {
   title.textContent = text;
   title.classList.add('planet-header')
   return title;
+};
+
+PlanetView.prototype.createDetail = function (label, text) {
+  const detail = document.createElement('p');
+  detail.textContent = `${label}: ${text}`;
+  return detail;
 };
 
 module.exports = PlanetView;
