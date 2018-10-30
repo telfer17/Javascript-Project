@@ -6,12 +6,15 @@ const QuizResult = require('./views/result.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
+if(document.querySelectorAll('#planets').length){
+
   const planet = new Planet('http://localhost:3000/api/solarsystem');
   planet.getData();
 
   const planetContainer = document.querySelector('#planets');
   const planetGridView = new PlanetGridView(planetContainer);
   planetGridView.bindEvents();
+} else {
 
   const quiz = new Quiz('http://localhost:3000/api/questions');
   quiz.getData();
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultContainer = document.querySelector('#quiz-result');
   const quizResult = new QuizResult(resultContainer);
   quizResult.bindEvents();
+}
 
 
 });
