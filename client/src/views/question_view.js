@@ -13,9 +13,8 @@ QuestionView.prototype.renderQuestions = function (questionObject) {
   const questionTitle = this.createQuestion(questionObject.question);
   questionElement.appendChild(questionTitle);
 
-  console.log(questionObject.answers);
-
-  const answerList = this.showAnswers(questionObject.answers, questionObject.question);
+  const answerList = this.showAnswers(questionObject.answers, questionObject._id);
+  console.log(questionObject._id);
   questionElement.appendChild(answerList);
 
   this.container.appendChild(questionElement);

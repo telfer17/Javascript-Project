@@ -25,7 +25,7 @@ if(document.querySelectorAll('#planets').length){
 
   const resultContainer = document.querySelector('#quiz-result');
   const quizResult = new QuizResult(resultContainer);
-  quizResult.bindEvents();
+  // quizResult.bindEvents();
 }
 
 
