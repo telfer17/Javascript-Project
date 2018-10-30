@@ -45,13 +45,14 @@ PlanetView.prototype.createImg = function (planet) {
 PlanetView.prototype.createTitle = function (text) {
   const title = document.createElement('h2');
   title.textContent = text;
-  title.classList.add('planet-header')
+  title.classList.add('planet-header');
   return title;
 };
 
 PlanetView.prototype.createDetail = function (label, text) {
   const detail = document.createElement('p');
   detail.textContent = `${label}: ${text}`;
+  detail.classList.add('planet-details');
   return detail;
 };
 
