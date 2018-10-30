@@ -42,7 +42,7 @@ Quiz.prototype.calculateScore = function (correct, submitted) {
       counter += 1
     }
   }
-  console.log(counter);
+  PubSub.publish('Quiz:scoreCalculated', counter);
   return counter
 };
 
