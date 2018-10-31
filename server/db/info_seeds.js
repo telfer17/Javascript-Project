@@ -21,7 +21,7 @@ db.planet_info.insertMany( [
     surfaceArea: "4.6023×108 km2",
     volume: "9.2843×1011 km3",
     mass: "4.8675×1024 kg",
-    fact: ,
+    fact: "There is only a 638 km different in diameter between Venus and Earth",
     image: '/images/venus.png'
   },
 
@@ -54,7 +54,7 @@ db.planet_info.insertMany( [
     surfaceArea: "6.1419×1010 km2",
     volume: "1.4313×1015 km3",
     mass: "1.8982×1027 kg",
-    fact: ,
+    fact: "Jupiter is 2.5x bigger than all other planets in the Solar System combined",
     image: '/images/jupiter.png'
   },
 
@@ -76,7 +76,7 @@ db.planet_info.insertMany( [
     surfaceArea: "8.1156×109 km2",
     volume: "6.833×1013 km3",
     mass: "(8.6810±0.0013)×1025 kg",
-    fact: ,
+    fact: "Uranus was officially discovered by Sir William Herschel in 1781",
     image: '/images/uranus.png'
   },
 
@@ -87,7 +87,7 @@ db.planet_info.insertMany( [
     surfaceArea: "7.6183×109 km2",
     volume: "6.254×1013 km3",
     mass: "1.02413×1026 kg",
-    fact: ,
+    fact: "Neptune is the Roman God of the sea",
     image: '/images/neptune.png'
   }
 ]);

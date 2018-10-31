@@ -33,6 +33,9 @@ PlanetView.prototype.render = function (planetItem) {
   const mass = this.createDetail('Mass', planetItem.mass);
   planetDetails.appendChild(mass);
 
+  const fact = this.createDetail('Fact', planetItem.fact);
+  planetDetails.appendChild(fact);
+
   const displayInfo = document.createElement('input');
   displayInfo.setAttribute('value', 'More Info')
   displayInfo.setAttribute('type', 'button');

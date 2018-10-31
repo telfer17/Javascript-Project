@@ -74,6 +74,7 @@ ul {
 .planet-details {
   text-align: center;
   padding-bottom: 0.5em;
+  width: 230px;
 }
 
 .planet-item {
