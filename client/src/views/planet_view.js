@@ -35,13 +35,23 @@ PlanetView.prototype.render = function (planetItem) {
 
   const displayInfo = document.createElement('input');
   displayInfo.setAttribute('value', 'More Info')
+  displayInfo.setAttribute('id', `${planetItem._id}`)
   displayInfo.setAttribute('type', 'button');
   planetItemElement.appendChild(displayInfo);
 
 
-  displayInfo.addEventListener('click', (event) => {
 
-    planetItemElement.appendChild(planetDetails)
+  displayInfo.addEventListener('click', (event) => {
+    debugger;
+    if (displayInfo.value ==='More Info'){
+
+        planetItemElement.appendChild(planetDetails);
+        displayInfo.setAttribute('value', 'Less info');
+      }
+      else {
+        planetDetails.innerHTML = '';
+        displayInfo.setAttribute('value', 'More Info');
+      }
   })
 
 
