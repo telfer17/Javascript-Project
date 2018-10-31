@@ -7,26 +7,17 @@ const QuizListView = function(container) {
 
 QuizListView.prototype.bindEvents = function () {
 
-  this.container.addEventListener('submit', (evt)=>{
-    evt.preventDefault();
+  this.container.addEventListener('submit', (event)=>{
+    event.preventDefault();
     this.findChecked();
-
-
+    this.container.innerHTML = '';
 
   });
-    // this.findChecked(event);
-    // console.log(event);
-  //   PubSub.publish('QuizListView:answers-submitted', (event))
-  // });
 
-  // })
-  // add and eventlistener to the button click to displey the quiz on the new page
-  // document.getElementById('quiz-button').addEventListener('click', (event)=>
     PubSub.subscribe('Quiz:data-loaded', (event)=> {
       this.render(event.detail);
     })
-
-}
+};
 
 QuizListView.prototype.findChecked = function () {
   const form = document.querySelector("form");

@@ -16,6 +16,7 @@ const QuizResult = function(container) {
   QuizResult.prototype.render = function (score) {
 
     const result = document.createElement('h3');
+    this.container.innerHTML = '';
     result.id = 'show-result';
     result.textContent = `Your total score is ${score}!`
     this.container.appendChild(result);
