@@ -11,7 +11,6 @@ Quiz.prototype.bindEvents = function () {
   PubSub.subscribe('QuizListView:answers-submitted', (event)=>{
     const answersArray = event.detail;
     const correctAnswers = this.findCorrectAnswers(this.questions);
-    console.log(correctAnswers);
     this.calculateScore(answersArray, correctAnswers);
 
   });
@@ -22,7 +21,6 @@ Quiz.prototype.getData = function () {
   const request = new Request(this.url);
   request.get()
     .then((data) => {
-      console.log(data);
       PubSub.publish('Quiz:data-loaded', data);
       this.questions = data;
     })
@@ -31,7 +29,6 @@ Quiz.prototype.getData = function () {
 
 Quiz.prototype.findCorrectAnswers = function (questions) {
   const correctAnswers = this.questions.map((question) => question.correct_answer)
-  console.log(correctAnswers);
   return correctAnswers
 };
 

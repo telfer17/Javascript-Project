@@ -9,7 +9,6 @@ QuizListView.prototype.bindEvents = function () {
 
   this.container.addEventListener('submit', (evt)=>{
     evt.preventDefault();
-    console.log(evt);
     this.findChecked();
 
 
@@ -24,10 +23,7 @@ QuizListView.prototype.bindEvents = function () {
   // add and eventlistener to the button click to displey the quiz on the new page
   // document.getElementById('quiz-button').addEventListener('click', (event)=>
     PubSub.subscribe('Quiz:data-loaded', (event)=> {
-      // console.log(event.detail);
-
       this.render(event.detail);
-
     })
 
 }
@@ -37,12 +33,9 @@ QuizListView.prototype.findChecked = function () {
   let answerArray = [];
   for(element of form.elements){
     if(element.type === "radio" && element.checked === true){
-      // return answerArray.push(element.value)
-      // console.log(element.value);
       answerArray.push(element.value);
     }
   }
-  console.log(answerArray);
   PubSub.publish('QuizListView:answers-submitted', answerArray);
   return answerArray;
 

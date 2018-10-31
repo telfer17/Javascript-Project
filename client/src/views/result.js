@@ -17,7 +17,7 @@ const QuizResult = function(container) {
 
     const result = document.createElement('h3');
     result.id = 'show-result';
-    result.textContent = `Your total score is ${score}! Well Done!`
+    result.textContent = `Your total score is ${score}!`
     this.container.appendChild(result);
   };
 
