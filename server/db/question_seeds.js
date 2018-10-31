@@ -77,18 +77,42 @@ db.planet_questions.insertMany([
 
   {
     id: 7,
-    question: "Which planet can sustain life?",
-    correct_answer: "Earth",
+    question: "Which planet is closest to Earth in size?",
+    correct_answer: "Venus",
     answers: [
       "Mars",
       "Neptune",
-      "Earth",
+      "Venus",
       "Jupiter"
     ]
   },
 
   {
     id: 8,
+    question: "What is the only planet that wasn't named after a Greek or Roman god/goddess?",
+    correct_answer: "Earth",
+    answers: [
+      "Venus",
+      "Neptune",
+      "Earth",
+      "Saturn"
+    ]
+  },
+
+  {
+    id: 9,
+    question: "Who is the Roman god of the sea??",
+    correct_answer: "Neptune",
+    answers: [
+      "Mars",
+      "Neptune",
+      "Uranus",
+      "Jupiter"
+    ]
+  },
+
+  {
+    id: 10,
     question: "Bonus! Which planet was subject to a movie starring Matt Damon?",
     correct_answer: "Mars",
     answers: [

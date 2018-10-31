@@ -1,11 +1,16 @@
 @font-face {
-    font-family: 'conthrax';
-    src: url('../fonts/conthrax.ttf');
+  font-family: 'conthrax';
+  src: url('../fonts/conthrax.ttf');
 }
 
 @font-face {
   font-family: 'space-age';
   src: url('../fonts/space-age.ttf');
+}
+
+@font-face {
+  font-family: 'champagne';
+  src: url('../fonts/champagne.ttf');
 }
 
 body {
@@ -31,7 +36,7 @@ a, a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: #ccc;
+  color: #79edf2;
 }
 
 header {
@@ -43,9 +48,11 @@ nav {
   font-family: 'conthrax';
   font-size: 1.8em;
   padding: 0px;
+  padding-right: 0.6em;
+  padding-bottom: 0.6em;
   margin: 0px;
-  padding-right: 25px;
   color: #6a6f77;
+  border-bottom: 2px solid #79edf2;
 }
 
 nav ul li {
@@ -62,7 +69,7 @@ ul {
 
 .planet-image {
   height: 240px;
-  width: auto;
+  width: 240px;
 }
 
 .planet-header {
@@ -72,20 +79,67 @@ ul {
 }
 
 .planet-details {
+  font-family: 'champagne';
+  font-size: 1.1em;
   text-align: center;
   padding-bottom: 0.5em;
+  width: 230px;
 }
 
 .planet-item {
   padding: 0.7em;
   margin-bottom: 2em;
+  border-bottom: 2px solid #d8d668;
+}
 
+.question-text {
+  color: #d8d668;
+}
+
+.list-items {
+  font-family: 'champagne';
+  font-size: 1.6em;
 }
 
 #planets {
   display: flex;
   flex-basis: 20%;
-  /* display: inline-flex; */
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 1em;
+}
+
+#info-button {
+  text-align: center;
+  background-color: #79edf2;
+  color: black;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+  width: 150px;
+  font-family: 'conthrax';
+}
+
+#info-button:hover {
+  background-color: #d8d668;
+  color:black;
+  font-family: 'conthrax';
+  cursor:pointer;
+}
+
+.button {
+  text-align: center;
+  background-color: #79edf2;
+  border: none;
+  padding:0.7em;
+  border-radius: 1em;
+  width: auto;
+  font-family: 'conthrax';
+}
+
+.button:hover {
+  font-family: 'conthrax';
+  cursor:pointer;
+  background-color: #d8d668;
 }

@@ -8,7 +8,7 @@ const QuestionView = function (container) {
 QuestionView.prototype.renderQuestions = function (questionObject) {
 
   const questionElement = document.createElement('div');
-  questionElement.id = 'question-item';
+  questionElement.classList.add('question-item');
 
   const questionTitle = this.createQuestion(questionObject.question);
   questionElement.appendChild(questionTitle);
@@ -36,6 +36,7 @@ QuestionView.prototype.showAnswers = function (answersArray, question) {
     const listItem = document.createElement('li');
     // set the textContent of it
     listItem.textContent = answer;
+    listItem.classList.add('list-items');
     // add a radio button
     const choiceSelection = document.createElement('input');
     choiceSelection.setAttribute('value', answer)

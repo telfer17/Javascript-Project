@@ -41,6 +41,7 @@ PlanetView.prototype.render = function (planetItem) {
   displayInfo.setAttribute('value', 'More Info')
   displayInfo.setAttribute('id', `${planetItem._id}`)
   displayInfo.setAttribute('type', 'button');
+  displayInfo.classList.add('button');
   planetItemElement.appendChild(displayInfo);
 
 
@@ -66,9 +67,7 @@ PlanetView.prototype.render = function (planetItem) {
       }
   })
 
-
   this.container.appendChild(planetItemElement);
-
 
 };
 

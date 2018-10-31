@@ -20,7 +20,5 @@ PlanetGridView.prototype.render = function (planetItems) {
 
 };
 
-  
-
 
 module.exports = PlanetGridView;
