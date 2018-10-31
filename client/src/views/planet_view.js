@@ -7,7 +7,7 @@ const PlanetView = function(container){
 PlanetView.prototype.render = function (planetItem) {
 
   const planetItemElement = document.createElement('div');
-  planetItemElement.id = 'planet-item';
+  planetItemElement.classList.add('planet-item');
 
   const image = this.createImg(planetItem.image);
   planetItemElement.appendChild(image);
@@ -16,7 +16,7 @@ PlanetView.prototype.render = function (planetItem) {
   planetItemElement.appendChild(title);
 
   const planetDetails = document.createElement('div');
-  planetDetails.id = 'planet-details';
+  planetDetails.classList.add('planet-details');
 
   const position = this.createDetail('Position from Sun', planetItem.position);
   planetDetails.appendChild(position);
@@ -37,7 +37,7 @@ PlanetView.prototype.render = function (planetItem) {
   displayInfo.setAttribute('value', 'More Info')
   displayInfo.setAttribute('type', 'button');
   planetItemElement.appendChild(displayInfo);
-  
+
 
   displayInfo.addEventListener('click', (event) => {
 
