@@ -18,6 +18,7 @@ if(document.querySelectorAll('#planets').length){
 
   const quiz = new Quiz('http://localhost:3000/api/questions');
   quiz.getData();
+  quiz.bindEvents();
 
   const quizContainer = document.querySelector('#planet-quiz');
   const quizListView = new QuizListView(quizContainer);
@@ -25,7 +26,7 @@ if(document.querySelectorAll('#planets').length){
 
   const resultContainer = document.querySelector('#quiz-result');
   const quizResult = new QuizResult(resultContainer);
-  // quizResult.bindEvents();
+  quizResult.bindEvents();
 }
 
 

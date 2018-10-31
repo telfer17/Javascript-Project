@@ -4,16 +4,23 @@ const QuizResult = function(container) {
   this.container = container;
 };
 
-// QuizResult.prototype.bindEvents = function () {
-//   PubSub.subscribe('QuizListView:answers-submitted', (event)=>{
-//     console.log('evt', event.detail);
-//     const answersSubmitted = event.detail;
-//     const selectedQuestion = document.querySelector('Which planet is closest to the Sun?')
-//     // console.log(selectedQuestion);
-//
-//
-//   })
-// };
+  QuizResult.prototype.bindEvents = function () {
+    PubSub.subscribe('Quiz:scoreCalculated', (event)=>{
+      const totalScore = event.detail;
+      console.log(totalScore);
+      this.render(totalScore)
+    })
+
+  };
+
+  QuizResult.prototype.render = function (score) {
+
+    const result = document.createElement('h3');
+    result.id = 'show-result';
+    result.textContent = `Your total score is ${score}!`
+    this.container.appendChild(result);
+  };
+
 
 
 
