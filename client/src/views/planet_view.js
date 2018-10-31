@@ -18,6 +18,7 @@ PlanetView.prototype.render = function (planetItem) {
   const planetDetails = document.createElement('div');
   planetDetails.classList.add('planet-details');
 
+
   const position = this.createDetail('Position from Sun', planetItem.position);
   planetDetails.appendChild(position);
 
@@ -33,6 +34,9 @@ PlanetView.prototype.render = function (planetItem) {
   const mass = this.createDetail('Mass', planetItem.mass);
   planetDetails.appendChild(mass);
 
+  const fact = this.createDetail('Fact', planetItem.fact);
+  planetDetails.appendChild(fact);
+
   const displayInfo = document.createElement('input');
   displayInfo.setAttribute('value', 'More Info')
   displayInfo.setAttribute('id', `${planetItem._id}`)
@@ -42,21 +46,33 @@ PlanetView.prototype.render = function (planetItem) {
 
 
   displayInfo.addEventListener('click', (event) => {
-    debugger;
-    if (displayInfo.value ==='More Info'){
 
+
+
+    if (displayInfo.value ==='More Info'){
+      planetDetails.appendChild(position);
+      planetDetails.appendChild(orbit);
+      planetDetails.appendChild(surface);
+      planetDetails.appendChild(volume);
+      planetDetails.appendChild(mass);
+      planetDetails.appendChild(fact);
         planetItemElement.appendChild(planetDetails);
         displayInfo.setAttribute('value', 'Less info');
       }
       else {
         planetDetails.innerHTML = '';
         displayInfo.setAttribute('value', 'More Info');
+        this.repopulate();
       }
   })
 
 
   this.container.appendChild(planetItemElement);
 
+
+};
+
+PlanetView.prototype.repopulate = function (object) {
 
 };
 
