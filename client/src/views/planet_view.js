@@ -39,6 +39,7 @@ PlanetView.prototype.render = function (planetItem) {
   const displayInfo = document.createElement('input');
   displayInfo.setAttribute('value', 'More Info')
   displayInfo.setAttribute('type', 'button');
+  displayInfo.classList.add('button');
   planetItemElement.appendChild(displayInfo);
 
 
@@ -47,9 +48,7 @@ PlanetView.prototype.render = function (planetItem) {
     planetItemElement.appendChild(planetDetails)
   })
 
-
   this.container.appendChild(planetItemElement);
-
 
 };
 

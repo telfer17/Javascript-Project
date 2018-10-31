@@ -31,7 +31,7 @@ a, a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: #ccc;
+  color: #79edf2;
 }
 
 header {
@@ -43,9 +43,11 @@ nav {
   font-family: 'conthrax';
   font-size: 1.8em;
   padding: 0px;
+  padding-right: 0.6em;
+  padding-bottom: 0.6em;
   margin: 0px;
-  padding-right: 25px;
   color: #6a6f77;
+  border-bottom: 2px solid #79edf2;
 }
 
 nav ul li {
@@ -91,7 +93,37 @@ ul {
   justify-content: space-around;
 }
 
-button {
-  background-color: black;
+#info-button {
+  text-align: center;
+  background-color: #79edf2;
+  color: black;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+  width: 150px;
   font-family: 'conthrax';
+}
+
+#info-button:hover {
+  background-color: #d8d668;
+  color:black;
+  font-family: 'conthrax';
+  cursor:pointer;
+}
+
+.button {
+  text-align: center;
+  background-color: #79edf2;
+  border: none;
+  padding:0.7em;
+  border-radius: 1em;
+  width: auto;
+  font-family: 'conthrax';
+}
+
+.button:hover {
+  font-family: 'conthrax';
+  cursor:pointer;
+  background-color: #d8d668;
 }

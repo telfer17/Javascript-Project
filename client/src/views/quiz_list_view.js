@@ -29,13 +29,7 @@ QuizListView.prototype.findChecked = function () {
   }
   PubSub.publish('QuizListView:answers-submitted', answerArray);
   return answerArray;
-
-
-
 }
-
-
-
 
 QuizListView.prototype.render = function (questions) {
 
