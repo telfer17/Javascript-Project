@@ -38,7 +38,7 @@ Quiz.prototype.calculateScore = function (correct, submitted) {
     if (correct[i] === submitted[i]){
       counter += 1
     }
-  }
+  };
   PubSub.publish('Quiz:scoreCalculated', counter);
   return counter
 };

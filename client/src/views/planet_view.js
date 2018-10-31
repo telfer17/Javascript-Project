@@ -15,22 +15,39 @@ PlanetView.prototype.render = function (planetItem) {
   const title = this.createTitle(planetItem.name);
   planetItemElement.appendChild(title);
 
+  const planetDetails = document.createElement('div');
+  planetDetails.id = 'planet-details';
+
   const position = this.createDetail('Position from Sun', planetItem.position);
-  planetItemElement.appendChild(position);
+  planetDetails.appendChild(position);
 
   const orbit = this.createDetail('Orbit', planetItem.orbit);
-  planetItemElement.appendChild(orbit);
+  planetDetails.appendChild(orbit);
 
   const surface = this.createDetail('Surface Area', planetItem.surfaceArea);
-  planetItemElement.appendChild(surface);
+  planetDetails.appendChild(surface);
 
   const volume = this.createDetail('Volume', planetItem.volume);
-  planetItemElement.appendChild(volume);
+  planetDetails.appendChild(volume);
 
   const mass = this.createDetail('Mass', planetItem.mass);
-  planetItemElement.appendChild(mass);
+  planetDetails.appendChild(mass);
+
+  const displayInfo = document.createElement('input');
+  displayInfo.setAttribute('value', 'More Info')
+  displayInfo.setAttribute('type', 'button');
+  planetItemElement.appendChild(displayInfo);
+  
+
+  displayInfo.addEventListener('click', (event) => {
+
+    planetItemElement.appendChild(planetDetails)
+  })
+
 
   this.container.appendChild(planetItemElement);
+
+
 };
 
 
